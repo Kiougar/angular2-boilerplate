@@ -1,0 +1,19 @@
+<h2>Login</h2>
+<form>
+  <p>
+    <label>
+      Username:
+      <input type="text" #username>
+    </label>
+  </p>
+  <p>
+    <label>
+      Password:
+      <input type="password" #password>
+    </label>
+  </p>
+  <p>
+    <button type="button" (click)="login(username.value, password.value)">Login</button>
+  </p>
+  <p *ngIf="message">{{message}}</p>
+</form>

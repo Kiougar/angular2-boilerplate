@@ -5,7 +5,7 @@ export class Angular2BoilerplatePage {
     return browser.get('/');
   }
 
-  getParagraphText() {
+  getHeaderText() {
     return element(by.css('app-root h1')).getText();
   }
 }

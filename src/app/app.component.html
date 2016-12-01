@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  <a routerLink="/admin" routerLinkActive="active">Admin</a>
+  <a *ngIf="!isLoggedIn()" routerLink="/login" routerLinkActive="active">Login</a>
+  <!-- `href` is added only for display purposes - preventDefault is called in the logout function -->
+  <a *ngIf="isLoggedIn()" (click)="logout($event)" href="/logout">Logout</a>
+</nav>
+<router-outlet></router-outlet>
